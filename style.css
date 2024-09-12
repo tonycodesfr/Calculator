@@ -1,0 +1,120 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --calc-clr: rgb(33, 31, 31);
+    --symbols-clr: rgb(97, 88, 88);
+    --number-clr: rgb(21, 19, 19);
+}
+body{
+    height: 100%;
+    /* overflow: hidden; */
+    background-color: var(--calc-clr);
+    
+}
+main{
+    height: 100vh;
+    width: 90vw;
+    margin: auto;
+    background-color: var(--calc-clr);
+    /* text-align: center; */
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+button {
+    border: 0;
+}
+.navigations {
+    display: flex;
+    margin: 4vh;
+
+}
+.left-arrow,
+ .right-arrow {
+    font-size: clamp(2rem, 2.5rem, 3rem);
+    margin: auto;
+
+}
+.left-arrow:hover,
+ .right-arrow:hover{
+    background-color: var(--symbols-clr);
+ }
+.screen-of-calculator{
+    position: relative;
+    margin: auto;
+    background-color: var(--calc-clr);
+    border: 1px solid grey; /* Delete later */
+    width: 98%;
+    height: 30vh;
+    border-radius: 10px;
+    color: white;
+}
+.first-container {
+    position: relative;
+}
+.history{
+    /* replace the button with an icon */
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    border-radius: 3px;
+    border: 0;
+    padding: 5px;
+}
+.calc-btns{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 20%;
+    gap: 20px 5px;
+}
+.main-controls {
+    margin-bottom: 40%;
+}
+.key-pad{
+    background-color: white;
+    font-size: 1.3rem;
+    text-align: center;
+}
+.left-arrow,.right-arrow {
+    background-color: var(--calc-clr);
+    color: white;
+}
+.key-pad:nth-of-type(1),
+.key-pad:nth-of-type(2),
+.key-pad:nth-of-type(3), 
+.key-pad:nth-of-type(4),
+.key-pad:nth-of-type(8),
+.key-pad:nth-of-type(12),
+.key-pad:nth-of-type(16),
+.key-pad:nth-of-type(19),
+.key-pad:nth-of-type(20),
+.key-pad:nth-of-type(18)
+{
+ background-color: var(--symbols-clr);
+ color: white;
+}
+.key-pad:nth-of-type(5),
+.key-pad:nth-of-type(6),
+.key-pad:nth-of-type(7),
+.key-pad:nth-of-type(9),
+.key-pad:nth-of-type(10),
+.key-pad:nth-of-type(11),
+.key-pad:nth-of-type(13),
+.key-pad:nth-of-type(14),
+.key-pad:nth-of-type(15),
+.key-pad:nth-of-type(17) {
+    background-color: var(--number-clr);
+    color: white;
+}
+.symbol:hover {
+    background-color: var(--number-clr);
+    transition: .3s;
+}
+.number:hover {
+    background-color: var(--symbols-clr);
+    transition: .3s;
+}
