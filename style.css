@@ -2,6 +2,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: cursive;
+ 
 }
 :root{
     --calc-clr: rgb(33, 31, 31);
@@ -12,6 +14,7 @@ body{
     height: 100%;
     /* overflow: hidden; */
     background-color: var(--calc-clr);
+ 
     
 }
 main{
@@ -74,7 +77,7 @@ button {
 .main-controls {
     margin-bottom: 40%;
 }
-.key-pad{
+.keyPad{
     background-color: white;
     font-size: 1.3rem;
     text-align: center;
@@ -83,30 +86,33 @@ button {
     background-color: var(--calc-clr);
     color: white;
 }
-.key-pad:nth-of-type(1),
-.key-pad:nth-of-type(2),
-.key-pad:nth-of-type(3), 
-.key-pad:nth-of-type(4),
-.key-pad:nth-of-type(8),
-.key-pad:nth-of-type(12),
-.key-pad:nth-of-type(16),
-.key-pad:nth-of-type(19),
-.key-pad:nth-of-type(20),
-.key-pad:nth-of-type(18)
+.keyPad:nth-of-type(1),
+.keyPad:nth-of-type(2),
+/* .keyPad:nth-of-type(3), 
+ */
+ .percent,
+.Ac,
+.equals,
+.keyPad:nth-of-type(8),
+.keyPad:nth-of-type(12),
+.keyPad:nth-of-type(16),
+.keyPad:nth-of-type(19),
+.keyPad:nth-of-type(20),
+.keyPad:nth-of-type(18)
 {
  background-color: var(--symbols-clr);
  color: white;
 }
-.key-pad:nth-of-type(5),
-.key-pad:nth-of-type(6),
-.key-pad:nth-of-type(7),
-.key-pad:nth-of-type(9),
-.key-pad:nth-of-type(10),
-.key-pad:nth-of-type(11),
-.key-pad:nth-of-type(13),
-.key-pad:nth-of-type(14),
-.key-pad:nth-of-type(15),
-.key-pad:nth-of-type(17) {
+.keyPad:nth-of-type(5),
+.keyPad:nth-of-type(6),
+.keyPad:nth-of-type(7),
+.keyPad:nth-of-type(9),
+.keyPad:nth-of-type(10),
+.keyPad:nth-of-type(11),
+.keyPad:nth-of-type(13),
+.keyPad:nth-of-type(14),
+.keyPad:nth-of-type(15),
+.keyPad:nth-of-type(17) {
     background-color: var(--number-clr);
     color: white;
 }
@@ -117,4 +123,19 @@ button {
 .number:hover {
     background-color: var(--symbols-clr);
     transition: .3s;
+}
+.Ac, .equals, .percent {
+   font-size: 1.3rem;
+}
+.history {
+    position: absolute;
+    top: .3em;
+    right: 2em;
+}
+
+.characters {
+    font-size: 2rem;
+    position: absolute;
+    bottom: .2em;
+    right: .3em;
 }
