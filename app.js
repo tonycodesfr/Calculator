@@ -22,91 +22,105 @@ const plus = document.querySelector(".plus");
 const minus = document.querySelector(".minus");
 const decimal = document.querySelector(".decimal");
 const multiply = document.querySelector(".multiply");
-const divide = document.querySelector(".divide");
+const divide = document.querySelector(".division");
 const equals = document.querySelector(".equals");
 const Clear = document.querySelector(".Ac");
 const percent = document.querySelector(".percent");
 let characters = document.querySelector(".characters");
-characters;
-let one1 = 1;
-let two2 = 2;
-let three3 = 3;
-let four4 = 4;
-let five5 = 5;
-let six6 = 6;
-let seven7 = 7;
-let eight8 = 8;
-let nine9 = 9;
-let zero0 = 0;
 
+let expressions = "";
 one.addEventListener("click", function () {
-  characters.innerHTML = characters.innerHTML + one1;
+  expressions += "1";
+  characters.innerHTML = expressions;
 });
 
 two.addEventListener("click", function () {
-  characters.innerHTML = characters.innerHTML + two2;
+  expressions += "2";
+  characters.innerHTML = expressions;
 });
 
 three.addEventListener("click", function () {
-  characters.innerHTML = characters.innerHTML + three3;
+  expressions += "3";
+  characters.innerHTML = expressions;
 });
 
 four.addEventListener("click", function () {
-  characters.innerHTML = characters.innerHTML + four4;
+  expressions += "4";
+  characters.innerHTML = expressions;
 });
 
 five.addEventListener("click", function () {
-  characters.innerHTML = characters.innerHTML + five5;
+  expressions += "5";
+  characters.innerHTML = expressions;
 });
 
 six.addEventListener("click", function () {
-  characters.innerHTML = characters.innerHTML + six6;
+  expressions += "6";
+  characters.innerHTML = expressions;
 });
 
 seven.addEventListener("click", function () {
-  characters.innerHTML = characters.innerHTML + seven7;
+  expressions += "7";
+  characters.innerHTML = expressions;
 });
 
 eight.addEventListener("click", function () {
-  characters.innerHTML = characters.innerHTML + eight8;
+  expressions += "8";
+  characters.innerHTML = expressions;
 });
 
 nine.addEventListener("click", function () {
-  characters.innerHTML = characters.innerHTML + nine9;
-});
-zero.addEventListener("click", function () {
-  characters.innerHTML = characters.innerHTML + zero0;
-});
-one.addEventListener("click", function () {
-  characters.innerHTML = characters.innerHTML + one1;
-});
-one.addEventListener("click", function () {
-  characters.innerHTML = characters.innerHTML + one1;
-});
-one.addEventListener("click", function () {
-  characters.innerHTML = characters.innerHTML + one1;
-});
-one.addEventListener("click", function () {
-  characters.innerHTML = characters.innerHTML + one1;
-});
-one.addEventListener("click", function () {
-  characters.innerHTML = characters.innerHTML + one1;
-});
-one.addEventListener("click", function () {
-  characters.innerHTML = characters.innerHTML + one1;
-});
-one.addEventListener("click", function () {
-  characters.innerHTML = characters.innerHTML + one1;
-});
-one.addEventListener("click", function () {
-  characters.innerHTML = characters.innerHTML + one1;
-});
-one.addEventListener("click", function () {
-  characters.innerHTML = characters.innerHTML + one1;
+  expressions += "9";
+  characters.innerHTML = expressions;
 });
 
-document.addEventListener("keydown", function (event) {
-  if (event.key === "c") {
-    characters.innerHTML = "";
-  }
+zero.addEventListener("click", function () {
+  expressions += "0";
+  characters.innerHTML = expressions;
+});
+
+rightB.addEventListener("click", function () {
+  expressions += "(";
+  characters.innerHTML = expressions;
+});
+
+leftB.addEventListener("click", function () {
+  expressions += ")";
+  characters.innerHTML = expressions;
+});
+
+divide.addEventListener("click", function () {
+  expressions += "/";
+  characters.innerHTML = expressions;
+});
+
+multiply.addEventListener("click", function () {
+  expressions += "*";
+  characters.innerHTML = expressions;
+});
+
+minus.addEventListener("click", function () {
+  expressions += "-";
+  characters.innerHTML = expressions;
+});
+
+plus.addEventListener("click", function () {
+  expressions += "+";
+  characters.innerHTML = expressions;
+});
+
+decimal.addEventListener("click", function () {
+  expressions += ".";
+  characters.innerHTML = expressions;
+});
+
+Clear.addEventListener("click", function () {
+  expressions += "";
+  characters.innerHTML = "";
+  location.reload();
+});
+
+equals.addEventListener("click", function () {
+  let result = eval(expressions);
+  characters.innerHTML = result;
 });
